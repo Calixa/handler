@@ -1,6 +1,6 @@
 ﻿Imports System.IO
 
-Public Class Form1
+Public Class main
 
     Dim mouseOffset As Point
 
@@ -18,10 +18,10 @@ Public Class Form1
     End Sub
 
 
-    Private Sub Form1_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+    Private Sub main_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         Timer26.Interval = 100
         Timer26.Enabled = False
-        abrunden(Me, 0, 0, Me.Width, Me.Height, 40)
+        round_off(Me, 0, 0, Me.Width, Me.Height, 40)
 
     End Sub
 
@@ -96,29 +96,29 @@ Public Class Form1
 
     Private Sub Button3_Click(sender As System.Object, e As System.EventArgs) Handles Button3.Click
         Me.Visible = False
-        Form2.Visible = True
+        config.Visible = True
 
-        Form2.OpenFileDialog1.Filter = "mangosd (.conf)|*.conf|RTF-Format (.rtf)|*.rtf"
-        If Form2.OpenFileDialog1.ShowDialog = Windows.Forms.DialogResult.OK Then
-            Form2.RichTextBox1.Text = System.IO.File.ReadAllText(Form2.OpenFileDialog1.FileName)
+        config.OpenFileDialog1.Filter = "mangosd (.conf)|*.conf|RTF-Format (.rtf)|*.rtf"
+        If config.OpenFileDialog1.ShowDialog = Windows.Forms.DialogResult.OK Then
+            config.RichTextBox1.Text = System.IO.File.ReadAllText(config.OpenFileDialog1.FileName)
 
-            Form2.OpenFileDialog2.Filter = "realmd (.conf)|*.conf|RTF-Format (.rtf)|*.rtf"
-            If Form2.OpenFileDialog2.ShowDialog = Windows.Forms.DialogResult.OK Then
-                Form2.RichTextBox2.Text = System.IO.File.ReadAllText(Form2.OpenFileDialog2.FileName)
+            config.OpenFileDialog2.Filter = "realmd (.conf)|*.conf|RTF-Format (.rtf)|*.rtf"
+            If config.OpenFileDialog2.ShowDialog = Windows.Forms.DialogResult.OK Then
+                config.RichTextBox2.Text = System.IO.File.ReadAllText(config.OpenFileDialog2.FileName)
 
-                Form2.OpenFileDialog3.Filter = "ahbot (.conf)|*.conf|RTF-Format (.rtf)|*.rtf"
-                If Form2.OpenFileDialog3.ShowDialog = Windows.Forms.DialogResult.OK Then
-                    Form2.RichTextBox3.Text = System.IO.File.ReadAllText(Form2.OpenFileDialog3.FileName)
+                config.OpenFileDialog3.Filter = "ahbot (.conf)|*.conf|RTF-Format (.rtf)|*.rtf"
+                If config.OpenFileDialog3.ShowDialog = Windows.Forms.DialogResult.OK Then
+                    config.RichTextBox3.Text = System.IO.File.ReadAllText(config.OpenFileDialog3.FileName)
 
-                    Form2.OpenFileDialog4.Filter = "scriptdev2 (.conf)|*.conf|RTF-Format (.rtf)|*.rtf"
-                    If Form2.OpenFileDialog4.ShowDialog = Windows.Forms.DialogResult.OK Then
-                        Form2.RichTextBox4.Text = System.IO.File.ReadAllText(Form2.OpenFileDialog4.FileName)
+                    config.OpenFileDialog4.Filter = "scriptdev2 (.conf)|*.conf|RTF-Format (.rtf)|*.rtf"
+                    If config.OpenFileDialog4.ShowDialog = Windows.Forms.DialogResult.OK Then
+                        config.RichTextBox4.Text = System.IO.File.ReadAllText(config.OpenFileDialog4.FileName)
 
                     End If
                 End If
             End If
         Else
-            Form2.Close()
+            config.Close()
             Me.Visible = True
         End If
     End Sub
@@ -202,8 +202,8 @@ Public Class Form1
 
     Private Sub Button7_Click(sender As System.Object, e As System.EventArgs) Handles Button7.Click
         Me.Close()
-        Form2.Close()
-        Form3.Close()
+        config.Close()
+        load_starter.Close()
     End Sub
 
     Private Sub Button8_Click(sender As System.Object, e As System.EventArgs) Handles Button8.Click

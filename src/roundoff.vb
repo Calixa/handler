@@ -1,5 +1,5 @@
-﻿Module Module1
-    Sub abrunden(ByVal was As Object, _
+﻿Module roundoff
+    Sub round_off(ByVal was As Object, _
       ByVal x As Integer, ByVal y As Integer, _
       ByVal width As Integer, ByVal height As Integer, _
       ByVal radius As Integer)

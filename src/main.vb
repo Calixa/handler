@@ -260,8 +260,8 @@ Public Class main
             Button2.Enabled = True
             Button6.Enabled = False
             Button1.Enabled = False
-            Label7.Visible = False
-            Label6.Visible = True
+            Label7.Text = "Realmd Online"
+            Label7.ForeColor = Color.LimeGreen
         Catch ex As Exception
             Timer7.Enabled = False
         End Try
@@ -282,8 +282,8 @@ Public Class main
             Button2.Enabled = False
             Button6.Enabled = True
             Button1.Enabled = True
-            Label7.Visible = True
-            Label6.Visible = False
+            Label7.Text = "Realmd Offline"
+            Label7.ForeColor = Color.Red
         End Try
     End Sub
 
@@ -365,8 +365,8 @@ Public Class main
         Dim client3 As New System.Net.Sockets.TcpClient
         Try
             client3.Connect(ep3)
-            Label7.Visible = False
-            Label6.Visible = True
+            Label7.Text = "Realmd Online"
+            Label7.ForeColor = Color.LimeGreen
             Timer11.Enabled = False
             Button12.Enabled = False
         Catch ex As Exception
@@ -588,8 +588,8 @@ Public Class main
             For Each Process In System.Diagnostics.Process.GetProcessesByName("realmd")
                 Process.Kill()
             Next
-            Label6.Visible = False
-            Label7.Visible = True
+            Label7.Text = "Realmd Offline"
+            Label7.ForeColor = Color.Red
             Timer23.Enabled = False
             Timer24.Enabled = True
         Catch ex As Exception

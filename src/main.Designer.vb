@@ -52,7 +52,6 @@ Partial Class main
         Me.Button10 = New System.Windows.Forms.Button()
         Me.Timer5 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer6 = New System.Windows.Forms.Timer(Me.components)
-        Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Timer7 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer8 = New System.Windows.Forms.Timer(Me.components)
@@ -366,17 +365,6 @@ Partial Class main
         '
         Me.Timer6.Interval = 500
         '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.BackColor = System.Drawing.Color.Black
-        Me.Label6.ForeColor = System.Drawing.Color.Lime
-        Me.Label6.Location = New System.Drawing.Point(124, 33)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(76, 13)
-        Me.Label6.TabIndex = 29
-        Me.Label6.Text = "Realmd Online"
-        '
         'Label7
         '
         Me.Label7.AutoSize = True
@@ -582,7 +570,7 @@ Partial Class main
         '
         Me.Timer29.Interval = 1000
         '
-        'Form1
+        'main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -600,7 +588,6 @@ Partial Class main
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Button10)
         Me.Controls.Add(Me.Button9)
         Me.Controls.Add(Me.Button8)
@@ -626,7 +613,7 @@ Partial Class main
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximumSize = New System.Drawing.Size(750, 650)
         Me.MinimumSize = New System.Drawing.Size(750, 650)
-        Me.Name = "Form1"
+        Me.Name = "main"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "MaNGOS Starter v.1.0.0"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -662,7 +649,6 @@ Partial Class main
     Friend WithEvents Button10 As System.Windows.Forms.Button
     Friend WithEvents Timer5 As System.Windows.Forms.Timer
     Friend WithEvents Timer6 As System.Windows.Forms.Timer
-    Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Timer7 As System.Windows.Forms.Timer
     Friend WithEvents Timer8 As System.Windows.Forms.Timer

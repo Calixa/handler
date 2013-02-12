@@ -98,37 +98,36 @@ Public Class main
         Me.Visible = False
         config.Visible = True
 
-        config.OpenFileDialog1.Filter = "mangosd (.conf)|*.conf|RTF-Format (.rtf)|*.rtf"
+        config.OpenFileDialog1.Filter = "mangosd (.conf)|*.conf|RTF-Format (.rtf)|*.rtf" 'open mangosd.conf
         If config.OpenFileDialog1.ShowDialog = Windows.Forms.DialogResult.OK Then
             config.RichTextBox1.Text = System.IO.File.ReadAllText(config.OpenFileDialog1.FileName)
 
-            config.OpenFileDialog2.Filter = "realmd (.conf)|*.conf|RTF-Format (.rtf)|*.rtf"
+            config.OpenFileDialog2.Filter = "realmd (.conf)|*.conf|RTF-Format (.rtf)|*.rtf" 'open realmd.conf
             If config.OpenFileDialog2.ShowDialog = Windows.Forms.DialogResult.OK Then
                 config.RichTextBox2.Text = System.IO.File.ReadAllText(config.OpenFileDialog2.FileName)
 
-                config.OpenFileDialog3.Filter = "ahbot (.conf)|*.conf|RTF-Format (.rtf)|*.rtf"
+                config.OpenFileDialog3.Filter = "ahbot (.conf)|*.conf|RTF-Format (.rtf)|*.rtf" 'open ahbot.conf
                 If config.OpenFileDialog3.ShowDialog = Windows.Forms.DialogResult.OK Then
                     config.RichTextBox3.Text = System.IO.File.ReadAllText(config.OpenFileDialog3.FileName)
 
-                    config.OpenFileDialog4.Filter = "scriptdev2 (.conf)|*.conf|RTF-Format (.rtf)|*.rtf"
+                    config.OpenFileDialog4.Filter = "scriptdev2 (.conf)|*.conf|RTF-Format (.rtf)|*.rtf" 'open scriptdev2.conf
                     If config.OpenFileDialog4.ShowDialog = Windows.Forms.DialogResult.OK Then
                         config.RichTextBox4.Text = System.IO.File.ReadAllText(config.OpenFileDialog4.FileName)
-
                     End If
                 End If
             End If
         Else
-            config.Close()
+            config.Close() 'Close all wehn not Config file loaded
             Me.Visible = True
         End If
     End Sub
 
     Private Sub Timer4_Tick(sender As System.Object, e As System.EventArgs) Handles Timer4.Tick
-        For Each Process In System.Diagnostics.Process.GetProcessesByName("mangosd")
+        For Each Process In System.Diagnostics.Process.GetProcessesByName("mangosd") 'Kill mangosd.exe
             Process.Kill()
             Timer4.Enabled = False
         Next
-        For Each Process In System.Diagnostics.Process.GetProcessesByName("realmd")
+        For Each Process In System.Diagnostics.Process.GetProcessesByName("realmd") 'Kill realmd.exe
             Process.Kill()
             Timer4.Enabled = False
         Next
@@ -136,9 +135,9 @@ Public Class main
 
     Private Sub Button4_Click(sender As System.Object, e As System.EventArgs) Handles Button4.Click
         If WebBrowser1.DocumentText = "alt" Then
+            WebBrowser2.Navigate("http://project-zero.eu/updates/1.0.2/Starter_v1.0.2.rar") 'Check for new Updates
             Label3.Text = "New Updates Available"
             Label3.ForeColor = Color.LimeGreen
-            WebBrowser2.Navigate("http://project-zero.eu/updates/1.0.2/Starter_v1.0.2.rar")
         Else
             Label3.Text = "No Updates Available"
             Label3.ForeColor = Color.Red
@@ -203,18 +202,6 @@ Public Class main
         load_starter.Close()
     End Sub
 
-    Private Sub Button8_Click(sender As System.Object, e As System.EventArgs) Handles Button8.Click
-        MsgBox("Coming Soon!!!")
-    End Sub
-
-    Private Sub Button9_Click(sender As System.Object, e As System.EventArgs) Handles Button9.Click
-        MsgBox("Coming Soon!!!")
-    End Sub
-
-    Private Sub Button10_Click(sender As System.Object, e As System.EventArgs) Handles Button10.Click
-        MsgBox("Coming Soon!!!")
-    End Sub
-
     Private Sub Timer5_Tick(sender As System.Object, e As System.EventArgs) Handles Timer5.Tick
         Dim ep1 As New System.Net.IPEndPoint(System.Net.IPAddress.Parse("127.0.0.1"), 3307)
         Dim client As New System.Net.Sockets.TcpClient
@@ -229,7 +216,6 @@ Public Class main
             Label5.Text = "MySQL Online"
             Label5.ForeColor = Color.LimeGreen
         End Try
-
     End Sub
 
     Private Sub Timer6_Tick(sender As System.Object, e As System.EventArgs) Handles Timer6.Tick
@@ -240,11 +226,11 @@ Public Class main
             Timer6.Enabled = False
         Catch ex As Exception
             Timer6.Enabled = False
-            Label5.Text = "MySQL Offline"
-            Label5.ForeColor = Color.Red
             Button5.Enabled = True
             Button6.Enabled = False
             Button1.Enabled = False
+            Label5.Text = "MySQL Offline"
+            Label5.ForeColor = Color.Red
         End Try
     End Sub
 
@@ -312,6 +298,11 @@ Public Class main
     End Sub
 
     Private Sub Timer11_Tick(sender As System.Object, e As System.EventArgs) Handles Timer11.Tick
+
+        Dim ep1 As New System.Net.IPEndPoint(System.Net.IPAddress.Parse("127.0.0.1"), 3307) 'MySQL Port
+        Dim ep2 As New System.Net.IPEndPoint(System.Net.IPAddress.Parse("127.0.0.1"), 8085) 'World Server Port
+        Dim ep3 As New System.Net.IPEndPoint(System.Net.IPAddress.Parse("127.0.0.1"), 3724) 'Realmd Port
+
         If My.Computer.FileSystem.FileExists("ms.conf") Then
             Button11.Visible = False
             Button12.Enabled = False
@@ -332,7 +323,6 @@ Public Class main
             Timer11.Enabled = False
         End If
 
-        Dim ep1 As New System.Net.IPEndPoint(System.Net.IPAddress.Parse("127.0.0.1"), 3307)
         Dim client1 As New System.Net.Sockets.TcpClient
         Try
             client1.Connect(ep1)
@@ -347,7 +337,6 @@ Public Class main
             Timer11.Enabled = False
         End Try
 
-        Dim ep2 As New System.Net.IPEndPoint(System.Net.IPAddress.Parse("127.0.0.1"), 8085)
         Dim client2 As New System.Net.Sockets.TcpClient
         Try
             client2.Connect(ep2)
@@ -359,7 +348,6 @@ Public Class main
             Timer11.Enabled = False
         End Try
 
-        Dim ep3 As New System.Net.IPEndPoint(System.Net.IPAddress.Parse("127.0.0.1"), 3724)
         Dim client3 As New System.Net.Sockets.TcpClient
         Try
             client3.Connect(ep3)
@@ -566,10 +554,10 @@ Public Class main
             For Each Process In System.Diagnostics.Process.GetProcessesByName("mangosd")
                 Process.Kill()
             Next
-            Label4.Text = "World Offline"
-            Label4.ForeColor = Color.Red
             Timer22.Enabled = False
             Timer23.Enabled = True
+            Label4.Text = "World Offline"
+            Label4.ForeColor = Color.Red
         Catch ex As Exception
             RichTextBox3.Text = RichTextBox3.Text & "port 8085 is free" & vbNewLine
             Timer22.Enabled = False

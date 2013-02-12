@@ -36,15 +36,12 @@ Partial Class main
         Me.WebBrowser1 = New System.Windows.Forms.WebBrowser()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.WebBrowser2 = New System.Windows.Forms.WebBrowser()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer3 = New System.Windows.Forms.Timer(Me.components)
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
@@ -214,40 +211,15 @@ Partial Class main
         Me.WebBrowser2.Url = New System.Uri("", System.UriKind.Relative)
         Me.WebBrowser2.Visible = False
         '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.ForeColor = System.Drawing.Color.Lime
-        Me.Label2.Location = New System.Drawing.Point(124, 625)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(115, 13)
-        Me.Label2.TabIndex = 15
-        Me.Label2.Text = "Version 1.0.1 Available"
-        Me.Label2.Visible = False
-        '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.ForeColor = System.Drawing.Color.Red
-        Me.Label3.Location = New System.Drawing.Point(124, 625)
+        Me.Label3.Location = New System.Drawing.Point(124, 628)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(110, 13)
+        Me.Label3.Size = New System.Drawing.Size(0, 13)
         Me.Label3.TabIndex = 19
-        Me.Label3.Text = "No Updates Available"
         Me.Label3.Visible = False
-        '
-        'LinkLabel1
-        '
-        Me.LinkLabel1.AutoSize = True
-        Me.LinkLabel1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.LinkLabel1.LinkColor = System.Drawing.Color.Blue
-        Me.LinkLabel1.Location = New System.Drawing.Point(244, 625)
-        Me.LinkLabel1.Name = "LinkLabel1"
-        Me.LinkLabel1.Size = New System.Drawing.Size(55, 13)
-        Me.LinkLabel1.TabIndex = 20
-        Me.LinkLabel1.TabStop = True
-        Me.LinkLabel1.Text = "Download"
-        Me.LinkLabel1.Visible = False
         '
         'Timer1
         '
@@ -283,23 +255,12 @@ Partial Class main
         Me.Button6.Text = "MySQL Stop"
         Me.Button6.UseVisualStyleBackColor = False
         '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.BackColor = System.Drawing.Color.Black
-        Me.Label4.ForeColor = System.Drawing.Color.Lime
-        Me.Label4.Location = New System.Drawing.Point(280, 33)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(75, 13)
-        Me.Label4.TabIndex = 23
-        Me.Label4.Text = "MySQL Online"
-        '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.BackColor = System.Drawing.Color.Black
         Me.Label5.ForeColor = System.Drawing.Color.Red
-        Me.Label5.Location = New System.Drawing.Point(281, 33)
+        Me.Label5.Location = New System.Drawing.Point(280, 33)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(75, 13)
         Me.Label5.TabIndex = 24
@@ -580,12 +541,9 @@ Partial Class main
         Me.Controls.Add(Me.Button8)
         Me.Controls.Add(Me.Button7)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Button5)
-        Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.WebBrowser2)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.WebBrowser1)
@@ -620,15 +578,12 @@ Partial Class main
     Friend WithEvents WebBrowser1 As System.Windows.Forms.WebBrowser
     Friend WithEvents Button4 As System.Windows.Forms.Button
     Friend WithEvents WebBrowser2 As System.Windows.Forms.WebBrowser
-    Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents LinkLabel1 As System.Windows.Forms.LinkLabel
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
     Friend WithEvents Timer2 As System.Windows.Forms.Timer
     Friend WithEvents Timer3 As System.Windows.Forms.Timer
     Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents Button6 As System.Windows.Forms.Button
-    Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Button7 As System.Windows.Forms.Button
     Friend WithEvents Button8 As System.Windows.Forms.Button

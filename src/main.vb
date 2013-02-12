@@ -136,15 +136,16 @@ Public Class main
 
     Private Sub Button4_Click(sender As System.Object, e As System.EventArgs) Handles Button4.Click
         If WebBrowser1.DocumentText = "alt" Then
-            Label2.Visible = True
-            LinkLabel1.Visible = True
+            Label3.Text = "New Updates Available"
+            Label3.ForeColor = Color.LimeGreen
             WebBrowser2.Navigate("http://project-zero.eu/updates/1.0.1/Starter_v1.0.1.rar")
         Else
-            Label3.Visible = True
+            Label3.Text = "No Updates Available"
+            Label3.ForeColor = Color.Red
         End If
     End Sub
 
-    Private Sub LinkLabel1_LinkClicked(sender As System.Object, e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
+    Private Sub LinkLabel1_LinkClicked(sender As System.Object, e As System.Windows.Forms.LinkLabelLinkClickedEventArgs)
         WebBrowser2.Navigate("http://project-zero.eu/updates/1.0.1/Starter_v1.0.1.rar")
     End Sub
 
@@ -226,11 +227,11 @@ Public Class main
             Timer5.Enabled = False
         Catch ex As Exception
             Timer5.Enabled = False
-            Label4.Visible = True
-            Label5.Visible = False
             Button5.Enabled = False
             Button6.Enabled = True
             Button1.Enabled = True
+            Label5.Text = "MySQL Online"
+            Label5.ForeColor = Color.LimeGreen
         End Try
 
     End Sub
@@ -243,8 +244,8 @@ Public Class main
             Timer6.Enabled = False
         Catch ex As Exception
             Timer6.Enabled = False
-            Label4.Visible = False
-            Label5.Visible = True
+            Label5.Text = "MySQL Offline"
+            Label5.ForeColor = Color.Red
             Button5.Enabled = True
             Button6.Enabled = False
             Button1.Enabled = False
@@ -339,12 +340,13 @@ Public Class main
         Dim client1 As New System.Net.Sockets.TcpClient
         Try
             client1.Connect(ep1)
-            Label5.Visible = False
-            Button5.Enabled = False
             Button1.Enabled = True
             Button6.Enabled = True
-            Timer11.Enabled = False
+            Button5.Enabled = False
             Button12.Enabled = False
+            Timer11.Enabled = False
+            Label5.Text = "MySQl Online"
+            Label5.ForeColor = Color.LimeGreen
         Catch ex As Exception
             Timer11.Enabled = False
         End Try
@@ -548,10 +550,10 @@ Public Class main
             For Each Process In System.Diagnostics.Process.GetProcessesByName("mysqld")
                 Process.Kill()
             Next
-            Label4.Visible = False
-            Label5.Visible = True
             Timer21.Enabled = False
             Timer22.Enabled = True
+            Label5.Text = "MySQL Offline"
+            Label5.ForeColor = Color.Red
         Catch ex As Exception
             RichTextBox3.Text = RichTextBox3.Text & "port 3307 is free" & vbNewLine
             Timer21.Enabled = False

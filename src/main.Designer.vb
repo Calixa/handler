@@ -49,13 +49,13 @@ Partial Class main
         Me.Button10 = New System.Windows.Forms.Button()
         Me.Timer5 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer6 = New System.Windows.Forms.Timer(Me.components)
-        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.Timer7 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer8 = New System.Windows.Forms.Timer(Me.components)
-        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.Timer9 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer10 = New System.Windows.Forms.Timer(Me.components)
-        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.Timer11 = New System.Windows.Forms.Timer(Me.components)
         Me.Button11 = New System.Windows.Forms.Button()
         Me.Timer12 = New System.Windows.Forms.Timer(Me.components)
@@ -325,16 +325,16 @@ Partial Class main
         '
         Me.Timer6.Interval = 500
         '
-        'Label7
+        'Label2
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.BackColor = System.Drawing.Color.Black
-        Me.Label7.ForeColor = System.Drawing.Color.Red
-        Me.Label7.Location = New System.Drawing.Point(124, 33)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(76, 13)
-        Me.Label7.TabIndex = 30
-        Me.Label7.Text = "Realmd Offline"
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Black
+        Me.Label2.ForeColor = System.Drawing.Color.Red
+        Me.Label2.Location = New System.Drawing.Point(124, 33)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(76, 13)
+        Me.Label2.TabIndex = 30
+        Me.Label2.Text = "Realmd Offline"
         '
         'Timer7
         '
@@ -344,16 +344,16 @@ Partial Class main
         '
         Me.Timer8.Interval = 500
         '
-        'Label9
+        'Label4
         '
-        Me.Label9.AutoSize = True
-        Me.Label9.BackColor = System.Drawing.Color.Black
-        Me.Label9.ForeColor = System.Drawing.Color.Red
-        Me.Label9.Location = New System.Drawing.Point(206, 33)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(68, 13)
-        Me.Label9.TabIndex = 32
-        Me.Label9.Text = "World Offline"
+        Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.Black
+        Me.Label4.ForeColor = System.Drawing.Color.Red
+        Me.Label4.Location = New System.Drawing.Point(206, 33)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(68, 13)
+        Me.Label4.TabIndex = 32
+        Me.Label4.Text = "World Offline"
         '
         'Timer9
         '
@@ -363,15 +363,15 @@ Partial Class main
         '
         Me.Timer10.Interval = 500
         '
-        'Label10
+        'Label6
         '
-        Me.Label10.AutoSize = True
-        Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label10.Location = New System.Drawing.Point(586, 622)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(137, 13)
-        Me.Label10.TabIndex = 33
-        Me.Label10.Text = "©2013 by MaNGOS / Salja"
+        Me.Label6.AutoSize = True
+        Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label6.Location = New System.Drawing.Point(586, 622)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(137, 13)
+        Me.Label6.TabIndex = 33
+        Me.Label6.Text = "©2013 by MaNGOS / Salja"
         '
         'Timer11
         '
@@ -533,9 +533,9 @@ Partial Class main
         Me.Controls.Add(Me.RichTextBox3)
         Me.Controls.Add(Me.Button11)
         Me.Controls.Add(Me.Label11)
-        Me.Controls.Add(Me.Label10)
-        Me.Controls.Add(Me.Label9)
-        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Button10)
         Me.Controls.Add(Me.Button9)
         Me.Controls.Add(Me.Button8)
@@ -591,13 +591,13 @@ Partial Class main
     Friend WithEvents Button10 As System.Windows.Forms.Button
     Friend WithEvents Timer5 As System.Windows.Forms.Timer
     Friend WithEvents Timer6 As System.Windows.Forms.Timer
-    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Timer7 As System.Windows.Forms.Timer
     Friend WithEvents Timer8 As System.Windows.Forms.Timer
-    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Timer9 As System.Windows.Forms.Timer
     Friend WithEvents Timer10 As System.Windows.Forms.Timer
-    Friend WithEvents Label10 As System.Windows.Forms.Label
+    Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Timer11 As System.Windows.Forms.Timer
     Friend WithEvents Button11 As System.Windows.Forms.Button
     Friend WithEvents Timer12 As System.Windows.Forms.Timer

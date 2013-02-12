@@ -138,15 +138,11 @@ Public Class main
         If WebBrowser1.DocumentText = "alt" Then
             Label3.Text = "New Updates Available"
             Label3.ForeColor = Color.LimeGreen
-            WebBrowser2.Navigate("http://project-zero.eu/updates/1.0.1/Starter_v1.0.1.rar")
+            WebBrowser2.Navigate("http://project-zero.eu/updates/1.0.2/Starter_v1.0.2.rar")
         Else
             Label3.Text = "No Updates Available"
             Label3.ForeColor = Color.Red
         End If
-    End Sub
-
-    Private Sub LinkLabel1_LinkClicked(sender As System.Object, e As System.Windows.Forms.LinkLabelLinkClickedEventArgs)
-        WebBrowser2.Navigate("http://project-zero.eu/updates/1.0.1/Starter_v1.0.1.rar")
     End Sub
 
     Private Sub Timer2_Tick(sender As System.Object, e As System.EventArgs) Handles Timer2.Tick
@@ -261,8 +257,8 @@ Public Class main
             Button2.Enabled = True
             Button6.Enabled = False
             Button1.Enabled = False
-            Label7.Text = "Realmd Online"
-            Label7.ForeColor = Color.LimeGreen
+            Label2.Text = "Realmd Online"
+            Label2.ForeColor = Color.LimeGreen
         Catch ex As Exception
             Timer7.Enabled = False
         End Try
@@ -283,8 +279,8 @@ Public Class main
             Button2.Enabled = False
             Button6.Enabled = True
             Button1.Enabled = True
-            Label7.Text = "Realmd Offline"
-            Label7.ForeColor = Color.Red
+            Label2.Text = "Realmd Offline"
+            Label2.ForeColor = Color.Red
         End Try
     End Sub
 
@@ -294,8 +290,8 @@ Public Class main
         Try
             client.Connect(ep1)
             Timer9.Enabled = False
-            Label9.Text = "World Online"
-            Label9.ForeColor = Color.LimeGreen
+            Label4.Text = "World Online"
+            Label4.ForeColor = Color.LimeGreen
             Button12.Enabled = True
         Catch ex As Exception
             Timer9.Enabled = True
@@ -310,8 +306,8 @@ Public Class main
             Timer10.Enabled = False
         Catch ex As Exception
             Timer10.Enabled = False
-            Label9.Text = "World Offline"
-            Label9.ForeColor = Color.Red
+            Label4.Text = "World Offline"
+            Label4.ForeColor = Color.Red
         End Try
     End Sub
 
@@ -355,8 +351,8 @@ Public Class main
         Dim client2 As New System.Net.Sockets.TcpClient
         Try
             client2.Connect(ep2)
-            Label9.Text = "World Online"
-            Label9.ForeColor = Color.LimeGreen
+            Label4.Text = "World Online"
+            Label4.ForeColor = Color.LimeGreen
             Timer11.Enabled = False
             Button12.Enabled = False
         Catch ex As Exception
@@ -367,8 +363,8 @@ Public Class main
         Dim client3 As New System.Net.Sockets.TcpClient
         Try
             client3.Connect(ep3)
-            Label7.Text = "Realmd Online"
-            Label7.ForeColor = Color.LimeGreen
+            Label2.Text = "Realmd Online"
+            Label2.ForeColor = Color.LimeGreen
             Timer11.Enabled = False
             Button12.Enabled = False
         Catch ex As Exception
@@ -570,8 +566,8 @@ Public Class main
             For Each Process In System.Diagnostics.Process.GetProcessesByName("mangosd")
                 Process.Kill()
             Next
-            Label9.Text = "World Offline"
-            Label9.ForeColor = Color.Red
+            Label4.Text = "World Offline"
+            Label4.ForeColor = Color.Red
             Timer22.Enabled = False
             Timer23.Enabled = True
         Catch ex As Exception
@@ -590,10 +586,10 @@ Public Class main
             For Each Process In System.Diagnostics.Process.GetProcessesByName("realmd")
                 Process.Kill()
             Next
-            Label7.Text = "Realmd Offline"
-            Label7.ForeColor = Color.Red
             Timer23.Enabled = False
             Timer24.Enabled = True
+            Label2.Text = "Realmd Offline"
+            Label2.ForeColor = Color.Red
         Catch ex As Exception
             RichTextBox3.Text = RichTextBox3.Text & "port 3724 is free" & vbNewLine & vbNewLine
             Timer23.Enabled = False

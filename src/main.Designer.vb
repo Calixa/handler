@@ -55,7 +55,6 @@ Partial Class main
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Timer7 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer8 = New System.Windows.Forms.Timer(Me.components)
-        Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Timer9 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer10 = New System.Windows.Forms.Timer(Me.components)
@@ -384,17 +383,6 @@ Partial Class main
         '
         Me.Timer8.Interval = 500
         '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.BackColor = System.Drawing.Color.Black
-        Me.Label8.ForeColor = System.Drawing.Color.Lime
-        Me.Label8.Location = New System.Drawing.Point(206, 33)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(68, 13)
-        Me.Label8.TabIndex = 31
-        Me.Label8.Text = "World Online"
-        '
         'Label9
         '
         Me.Label9.AutoSize = True
@@ -586,7 +574,6 @@ Partial Class main
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label9)
-        Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Button10)
         Me.Controls.Add(Me.Button9)
@@ -652,7 +639,6 @@ Partial Class main
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Timer7 As System.Windows.Forms.Timer
     Friend WithEvents Timer8 As System.Windows.Forms.Timer
-    Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents Timer9 As System.Windows.Forms.Timer
     Friend WithEvents Timer10 As System.Windows.Forms.Timer

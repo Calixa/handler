@@ -293,8 +293,8 @@ Public Class main
         Try
             client.Connect(ep1)
             Timer9.Enabled = False
-            Label8.Visible = True
-            Label9.Visible = False
+            Label9.Text = "World Online"
+            Label9.ForeColor = Color.LimeGreen
             Button12.Enabled = True
         Catch ex As Exception
             Timer9.Enabled = True
@@ -309,8 +309,8 @@ Public Class main
             Timer10.Enabled = False
         Catch ex As Exception
             Timer10.Enabled = False
-            Label8.Visible = False
-            Label9.Visible = True
+            Label9.Text = "World Offline"
+            Label9.ForeColor = Color.Red
         End Try
     End Sub
 
@@ -353,8 +353,8 @@ Public Class main
         Dim client2 As New System.Net.Sockets.TcpClient
         Try
             client2.Connect(ep2)
-            Label8.Visible = True
-            Label9.Visible = False
+            Label9.Text = "World Online"
+            Label9.ForeColor = Color.LimeGreen
             Timer11.Enabled = False
             Button12.Enabled = False
         Catch ex As Exception
@@ -568,8 +568,8 @@ Public Class main
             For Each Process In System.Diagnostics.Process.GetProcessesByName("mangosd")
                 Process.Kill()
             Next
-            Label8.Visible = False
-            Label9.Visible = True
+            Label9.Text = "World Offline"
+            Label9.ForeColor = Color.Red
             Timer22.Enabled = False
             Timer23.Enabled = True
         Catch ex As Exception
